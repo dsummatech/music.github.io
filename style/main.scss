@@ -1,0 +1,713 @@
+$backcol:blue;
+$notecol:#800040;
+$notecolsub:#b10159;
+body{
+    
+    background-size:cover;
+    
+    margin: auto;
+    .ltop{
+        position: fixed;
+        height: max-content;
+        bottom: 10%;
+        left: 3%;
+        padding: 1%;
+        font-size: 150%;
+        width: max-content;
+        border: 0;
+        color: white;
+        font-weight: bold;
+        background-color: transparent;
+        border-radius: 10px;
+        box-shadow: 0px 0px 4px #af2d6e;
+        display: none;
+        cursor: pointer;
+        
+        transition: linear 3s ease;
+        text-align: center;
+        i{
+            background-color: white;
+            padding: 10px;
+            border-radius: 50%;
+        }
+    }
+    @media screen and (max-width:1000px) {
+        .ltop{
+           padding: 2%; 
+        }
+    }
+    .ltop img{
+        width: 30px;
+        height: 30px;
+        
+    }
+    .top{
+        text-align: center;
+        position: fixed;
+        height: max-content;
+        bottom: 10%;
+        right: 3%;
+        padding: 1%;
+        width: max-content;
+        border: 0;
+        color: green;
+        font-weight: bold;
+        background-color: transparent;
+        border-radius: 10px;
+        box-shadow: 0px 0px 4px black;
+        text-shadow: 0px 0px 1px white;
+        cursor: pointer;
+        border-width: 3px;
+        border-style:dotted;
+        border-color: green;
+        transition: linear 3s ease;
+        animation: zoom 1s infinite;
+        
+        img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        
+    }
+    
+    @media screen and (max-width:1000px) {
+        .top{
+           padding: 1%; 
+        }
+    }
+    
+    
+    nav{
+        background-color: $notecol;
+        height: 50px;
+        width: 100%;
+        position: fixed;
+        color: white;
+        .itutorial-drop{
+            height: 100%;
+            width: 100%;
+            background-color: $notecol;
+            position: fixed;
+            top: 0%;
+            left: 0%;
+            color: black;
+            perspective: 1000px;
+        }
+        .itutorial-drop .abso{
+            width: 100%;
+            opacity: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: transparent;
+        }
+        .itutorial-drop .abso img{
+        width: 100%;
+        height: 100%;
+        opacity: 20%;
+        }
+        .itutorial-drop .rela{
+            width: 30%;
+            position: relative;
+            top: 35%;
+            left: 35%;
+            height: 30%;
+            text-align: center;
+            
+            
+            animation: soom 2s infinite;
+        }
+        
+        
+        .itutorial-drop .rela img{
+            width: 100%;
+            height: 100%;
+            
+            position: relative;
+           
+            }
+        
+        .menu{
+            width: 100%;
+            height: inherit;
+            display: inline-flex;
+        justify-content: space-between;
+        .logo{
+            height: inherit;
+            width: 100px;
+            position: relative;
+            left: 5%;
+            img{
+                height: inherit;
+                width: inherit;
+            }
+        }
+        .wide-menu{
+            height: inherit;
+            width: max-content;
+            padding: 0px 2px;
+            background-color: transparent;
+            right: 10%;
+            position: relative;
+            p{
+                word-spacing: 50px;
+                font-family: Arial, Helvetica, sans-serif;
+                a{
+                    text-decoration: none;
+                    color: unset;
+                }
+                .active{
+                    text-decoration: underline;
+                    text-decoration-color:$notecolsub;
+                    text-decoration-thickness: 3px;
+                    transition: 5s ease;
+                }
+                b{
+                    word-spacing: normal;
+                }
+            }
+        }
+        @media screen and (max-width:1000px){
+            .wide-menu{
+                display: none;
+            }
+        }
+        .menu-btn{
+            height: inherit;
+            width: 50px;
+            background-color: transparent;
+            
+            display: none;
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+        @media screen and (max-width:1000px){
+            .menu-btn{
+                display: block;
+                position: relative;
+                right: 2%;
+            }
+        }
+        }
+        .mini-menu{
+            position: relative;
+            width: max-content;
+            background-color: $notecol;
+            float: right;
+            right: 2%;
+            top: -8%;
+            padding: 0px 40px;
+            box-shadow: 0px 0px 3px white;
+            display: none;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: auto;
+            a{
+                text-decoration: none;
+                color: unset;
+            }
+            .active{
+                text-decoration: underline;
+                text-decoration-color:$notecolsub;
+                text-decoration-thickness: 3px;
+                transition: 5s ease;
+            }
+        }
+    }
+    .body{
+        position: absolute;
+        height: max-content;
+        width: 100%;
+        margin-top: 50px;
+        .container{
+            height: max-content;
+            width: 100%;
+            display: inline-flex;
+            justify-content: space-between;
+            background-color: black;
+        
+            .left-div{
+                height: 500px;
+                width: 70%;
+                background-color: rgb(0, 0, 38);
+                .abso{
+                    height: 500px;
+                    width: 70%;
+                    position: absolute;
+                    margin: auto;
+                    overflow: hidden;
+                    background-color: black;
+                    .img{
+                        height: 100%;
+                        width:400%;
+                        overflow: hidden;
+                        display: inline-flex;
+                        justify-content: space-between;
+                        opacity: 70%;
+                        img{
+                            height: 100%;
+                            width:25%;
+                            position: relative;
+                            transition: ease 1s;
+                        }
+        
+                    }
+                    
+                }
+                @media screen and (max-width:1000px){
+                    .abso{
+                        width: 100%;
+                        height: 380px;
+                    }
+                }
+                .rela{
+                    /*background-color: $notecolsub;*/
+                    height: max-content;
+                    padding: 10px 0px;
+                    width: 100%;
+                    top: 200px;
+                    overflow: hidden;
+                    position: relative;
+                    margin: auto;
+                    text-shadow: 0px 0px 4px blue;
+                    color: white;
+                    *{
+                        text-align: center;
+                        margin: auto;
+                    }
+                    p{
+                        color: white; width: max-content; height: max-content;  text-shadow:0px 0px 2px white, 1px 1px 4px blue;
+                        animation: star 1s infinite;
+                        
+                    }
+                    @keyframes star {
+                        0%{transform: scale(1.1);}
+                        10%{transform: scale(1.5);}
+                        50%{transform: scale(2.5);}
+                        100%{transform: scale(3.0.5);}
+                    }
+                    h2{
+                        font-weight: bolder;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 200%;
+                        /*color:#c40564;*/
+                    }
+                }
+                @media screen and (max-width:1000px){
+                    .rela{
+                        top: 130px;
+                        width: 100%;
+                    }
+                }
+                
+            }
+            @media screen and (max-width:1000px){
+                .left-div{
+                    width: 100%;
+                    height: 400px;
+                }
+            }
+            .right-div{
+                height: 500px;
+                width: 29.9%;
+                background-color: $notecol;
+                color: white;
+                overflow-y:hidden;
+                *{
+                    margin: auto;
+                }
+                .facts{
+                    height: max-content;
+                    
+                    width: 90%;
+                    margin: auto;
+                    position: relative;
+                    top: 50px;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    text-align: center;
+                    .s-media{
+                        display: inline-flex;
+                        justify-content: center;
+                        img{
+                            background: white;
+                            border-radius: 50%;
+                            box-shadow: 0px 0px 3px black;
+                            height: inherit;
+                            width: 23%;
+                        }
+                    }
+                }
+                @media screen and (max-width:1000px){
+                    .facts{
+                        top: 0px;
+                    }
+                }
+                footer{
+                    background-color: transparent;
+                    height: max-content;
+                    width: 100%;
+                    text-align: center;
+                    div{
+                        position: relative;
+                        top: 5px;
+                        word-spacing: 5px;
+                        width: 100%;
+                        margin: auto;
+                        i{
+                            
+                            padding: 10px;
+                            width: fit-content;
+                            border-radius: 50%;
+                            cursor: pointer;
+                           font-size: 15px;
+                           
+                           background-color: white;
+                        }
+                        @media screen and (max-width:1000px){
+                            i{
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width:1000px){
+                .right-div{
+                    overflow-y: scroll;
+                    width: 100%;
+                    height: 300px;
+                }
+            }
+            
+        }
+        @media screen and (max-width:1000px){
+            .container{
+                display: block;
+                justify-content: unset;
+            }
+        }
+        .about{
+            width: 90%;
+            height: max-content;
+            position: relative;
+            top: 15px;
+            margin: auto;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image:url("images/carlogo.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: white;
+            padding: 10px 0px;
+            *{
+                margin: auto;
+            }
+            h2{
+                font-size: 200%;
+            }
+            .about-row{
+                width: 100%;
+                margin: auto;
+                height: max-content;
+                display: inline-flex;
+                justify-content: space-between;
+                position: relative;
+                margin-top: 10px;
+                .about-col{
+                    width: 48%;
+                    background-color: transparent;
+                    text-align: left;
+                    text-shadow: 0px 0px 8px black;
+                    button{
+                        font-size: large;
+                        border: 2px solid $notecolsub;
+                        width: max-content;
+                        padding: 10px 25px;
+                    }
+                    img{
+                        height: 400px;
+                        width: 100%;
+                        box-shadow: 0px 0px 5px black;
+                    }
+                    @media screen and (max-width:1000px){
+                        img{
+                            height: 350px;
+                            
+                        }
+                    }
+                }
+                @media screen and (max-width:1000px){
+                    .about-col{
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+            @media screen and (max-width:1000px){
+                .about-row{
+                    display: block;
+                    justify-content: unset;
+                }
+            }
+        }
+        .infinite{
+            text-align: center;
+            background-color: white;
+            height: max-content;
+            width: 90%;
+            margin: auto;
+            
+            margin-top: 30px;
+            *{
+                margin: auto;
+            }
+            h2{
+                font-family: Arial, Helvetica, sans-serif;
+                
+            }
+            .infinite-menu{
+                position: relative;
+                top: 8px;
+                width: 100%;
+                margin: auto;
+                p{
+                    word-spacing: 100px;
+                    background-color: $notecol;
+                    padding: max(9px);
+                    .active{
+                        background-color: white;
+                        color: $notecol;
+                    }
+                    
+                    b{
+                        color: white;
+                        word-spacing: normal;
+                        padding: 10px;
+                        box-shadow: 0px 0px 3px white;
+                        cursor: pointer;
+                        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    }
+                    @media screen and (max-width:1000px){
+                        b{
+                            padding: 10px 5px;
+                            font-size: 60%;
+                        }
+                    }
+                    b:first{
+                        background-color: white;
+                    }
+                }
+                @media screen and (max-width:1000px){
+                    p{
+                        padding: 4.5px;
+                        word-spacing: 2px;
+                    }
+                }
+            }
+            .infinite-bmw{
+                position: relative;
+                top: 10px;
+                height: max-content;
+                width: 80%;
+                margin: auto;
+                background-color: white;
+                padding: 10px;
+                border: groove 10px $notecol;
+                .infinite-list{
+                    background-color: transparent;
+                    height: max-content;
+                    position: relative;
+                    
+                    width: 100%;
+                    
+                    .row-benz, .row-toyota, .row-honda{
+                        display: none;
+                        
+                    }
+                    .infinite-row{
+                        height: max-content;
+                        width: 100%;
+                        margin: auto;
+                        position: relative;
+                        margin: 0px 0px;
+                        background-color: transparent;
+                        display: inline-flex;
+                        justify-content: space-between;
+                        .infinite-col{
+                            width: 45%;
+                            background-color: transparent;
+                            margin: auto;
+                            text-align: center;
+                            img{
+                                width: 100%;
+                                height: 250px;
+                                border-top-left-radius: 10px;
+                                border-top-right-radius: 10px;
+                                box-shadow: 0px 0px 3px black;
+                            }
+                            @media screen and (max-width:1000px){
+                                img{
+                                    height: 200px;
+                                }
+                            }
+                            video{
+                                width: 100%;
+                                height: 250px;
+                                border-top-left-radius: 10px;
+                                border-top-right-radius: 10px;
+                                box-shadow: 0px 0px 3px black;
+                            }
+                            @media screen and (max-width:1000px){
+                                video{
+                                    height: 200px;
+                                }
+                            }
+                            .col-link{
+                                width: 80%;
+                                height: max-content;
+                                background-color: $backcol;
+                                border-bottom-left-radius: 10px;
+                                border-bottom-right-radius: 10px;
+                                padding: 10px 0px;
+                                text-align: center;
+                                margin: auto;
+                                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                            }
+                            span{
+                                
+                                color: white;
+                                font-weight: bold;
+                                width: 100%;
+                                
+                            }
+                        }
+                        @media screen and (max-width:1000px){
+                            .infinite-col{
+                                width: 100%;
+                                margin: auto;
+                            }
+                        }
+                    }
+                    @media screen and (max-width:1000px){
+                        .infinite-row{
+                            display: block;
+                            justify-content: unset;
+                            margin: 10px 5px;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        .subscriber{
+            position: relative;
+            top: 60px;
+            margin: auto;
+            height: max-content;
+            padding: 10px 0px;
+            width: 95%;
+            background-color: $notecolsub;
+            margin-top: 10px;
+            text-align: center;
+            box-shadow: 0px 0px 4px black;
+            *{
+                margin: auto;
+            }
+            input{
+                width: 60%;
+                height:100px;
+                border: 0;
+                font-size: larger;
+                
+            }
+            input::placeholder{
+                font-size: large;
+            }
+            .button{
+                width: 30%;
+                border-top-right-radius: 3px;
+                border-bottom-right-radius: 3px;
+                background-color: white;
+                border: 0;
+                font-size: larger;
+                height: 102.499px;
+                background-color: blue;
+                color: white;
+                i{
+                    font-size: large;
+                    font-weight: bold;
+                    height: fit-content;
+                    height: max-content;
+                }
+            }
+        }
+        footer{
+            background-color: #ca0366;
+            height: 150px;
+            width: 100%;
+            text-align: center;
+            div{
+                position: relative;
+                top: 70px;
+                word-spacing: 10px;
+                width: 80%;
+                margin: auto;
+                i{
+                    
+                    padding: 10px;
+                    width: fit-content;
+                    border-radius: 50%;
+                    cursor: pointer;
+                   font-size: 40px;
+                   
+                   background-color: white;
+                }
+                @media screen and (max-width:1000px){
+                    i{
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+    /*.motor{
+        background-color: transparent;
+        height: max-content;
+        padding: 2px 0px;
+        width: 100%;
+        position: fixed;
+        top: 50%;
+        img{
+            margin: auto;
+            height: 50px;
+            width: 10%;
+            left: -30%;
+            transition: ease 0.001s;
+            position: relative;
+        }
+        @media screen and (max-width:1000px){
+            img{
+                width: 20%;
+            }
+        }
+    }*/
+    .line{
+         background-position:center; background-size: cover; background-repeat: no-repeat; height: 5px; width: 10%; border-radius: 10px; margin: auto; box-shadow: 0px 0px 3px black;
+    }
+    @media screen and (max-width:1000px){
+        .line{
+            width: 40%;
+        }
+    }
+    .gallery{
+        display: table;
+        img{
+            width: 48%;
+            height: 250px;
+        }
+    }
+}
+
